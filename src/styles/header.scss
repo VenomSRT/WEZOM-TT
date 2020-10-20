@@ -1,0 +1,46 @@
+.header {
+  background-color: $bgGrey;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    order: 3;
+  }
+
+  &__menu-item {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &__menu-button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__button-image {
+    width: 14px;
+    height: 10px;
+    margin: auto;
+    background: url("../images/sprites.png") -10px -323px;
+  }
+
+  &__enter-button {
+    height: 50px;
+    background-color: $bgButtonOrange;
+    border: none;
+  }
+
+  &__enter-description {
+    color: $fontWhite;
+    text-transform: uppercase;
+  }
+}

@@ -4,10 +4,1384 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <div class="header__top container">
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Главная</a>
+            </li>
+
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">О компании</a>
+            </li>
+
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Ссылка 1</a>
+            </li>
+
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Ссылка 2</a>
+            </li>
+
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Ссылка 3</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__menu-button">
+          <div class="header__button-image"></div>
+        </div>
+
+        <button class="header__enter-button">
+          <img
+            src="./images/person-icon.png"
+            alt="login icon"
+            class="header__enter-icon"
+          >
+          <span class="header__enter-description">Вход</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="main__head">
+          <a href="#" class="main__site-logo">
+            <img src="./images/site-logo.png" alt="site logo">
+          </a>
+
+          <div class="main__callback">
+            <span class="main__shop-telephone">+380 98 170 00 740</span>
+            <span class="main__shop-telephone">+380 98 170 00 740</span>
+            <button>Перезвонить мне</button>
+          </div>
+
+          <div class="main__misc-block">
+            <div class="main__comparison">
+              <div class="main__counter-label"></div>
+              <img
+                src="./images/weighter-icon.png"
+                alt="weighter image"
+                class="main__misc-image"
+              >
+              <span class="main__misc-description">Сравнение</span>
+            </div>
+
+            <div class="main__comparison">
+              <div class="main__counter-label"></div>
+              <img
+                src="./images/star-icon.png"
+                alt="star image"
+                class="main__misc-image"
+              >
+              <span class="main__misc-description">Избранное</span>
+            </div>
+
+            <div class="main__comparison">
+              <div class="main__counter-label"></div>
+              <img
+                src="./images/cart-icon.png"
+                alt="cart image"
+                class="main__misc-image"
+              >
+              <span class="main__misc-description">Корзина</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__goods-navigation goods-navigation">
+          <aside class="goods-navigation__menu">
+            <div class="goods-navigation__menu-head">
+              <div class="goods-navigation__menu-button"></div>
+              <div class="goods-navigation__menu-title">Меню</div>
+            </div>
+            <ul class="goods-navigation__menu-list">
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 1</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 2</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 3</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 4</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 5</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 6</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="goods-navigation__menu-item">
+                <a href="#" class="goods-navigation__main-link">Ссылка 7</a>
+                <ul class="goods-navigation__menu-sub-list">
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                  <li class="goods-navigation__menu-sub-item">
+                    <a href="" class="goods-navigation__sub-link">Ссылка</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+
+          <div class="main__goods-filter goods-filter">
+            <div class="goods-filter__search-container">
+              <input type="text" class="goods-filter__search-bar">
+              <div class="goods-filter__search-category">
+                <ul class="goods-filter__category-list">
+                  <li class="goods-filter__category-item">Категория 1</li>
+                  <li class="goods-filter__category-item">Категория 2</li>
+                  <li class="goods-filter__category-item">Категория 3</li>
+                  <li class="goods-filter__category-item">Категория 4</li>
+                  <li class="goods-filter__category-item">Категория 5</li>
+                </ul>
+              </div>
+              <button class="goods-filter__search-button">Поиск</button>
+            </div>
+
+            <div class="goods-filter__filter-container">
+              <div class="goods-filter__category">
+                <input
+                  type="radio"
+                  name="category"
+                  id="cars-tab"
+                  class="goods-filter__radio"
+                  checked
+                >
+                <label for="cars-tab" class="goods-filter__category-label">
+                  <span class="goods-filter__category-title">Ссылка 1</span>
+                </label>
+                <form
+                  id="cars"
+                  class="goods-filter__form form"
+                  action="#"
+                >
+                  <div class="form__tabs-container">
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="tab-one"
+                    >
+                    <label for="tab-one">Tab 1</label>
+
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="tab-two"
+                      checked
+                    >
+                    <label for="tab-two">Tab 2</label>
+                  </div>
+
+                  <div class="form__selects-container">
+                    <select
+                      name="select-1"
+                      class="form__select"
+                      form="cars"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 1
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-2"
+                      class="form__select"
+                      form="cars"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 2
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-3"
+                      class="form__select"
+                      form="cars"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 3
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-4"
+                      class="form__select"
+                      form="cars"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 4
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-5"
+                      class="form__select"
+                      form="cars"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 5
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <div class="form__price-container">
+                      <label for="cars-price-input">
+                        Цена
+                        <input
+                          type="text"
+                          id="cars-price-input"
+                          class="form__price-input"
+                          placeholder="50"
+                        >
+                      </label>
+                      <input
+                        type="text"
+                        class="form__price-input"
+                        placeholder="250000"
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form__controls-container">
+                    <button class="form__reset">Очистить фильтр</button>
+                    <input
+                      type="submit"
+                      class="form__submit"
+                      value="Применить фильтр"
+                    >
+                  </div>
+                </form>
+
+                <input
+                    type="radio"
+                    name="category"
+                    id="trucks-tab"
+                    class="goods-filter__radio"
+                  >
+                <label for="trucks-tab" class="goods-filter__category-label">
+                  <span class="goods-filter__category-title">Ссылка 2</span>
+                </label>
+                <form
+                  id="trucks"
+                  class="goods-filter__form form"
+                  action="#"
+                >
+                  <div class="form__tabs-container">
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="trucks-tab-one"
+                    >
+                    <label for="trucks-tab-one">Tab 1</label>
+
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="trucks-tab-two"
+                      checked
+                    >
+                    <label for="trucks-tab-two">Tab 2</label>
+                  </div>
+
+                  <div class="form__selects-container">
+                    <select
+                      name="select-1"
+                      class="form__select"
+                      form="trucks"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 1
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-2"
+                      class="form__select"
+                      form="trucks"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 2
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-3"
+                      class="form__select"
+                      form="trucks"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 3
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-4"
+                      class="form__select"
+                      form="trucks"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 4
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-5"
+                      class="form__select"
+                      form="trucks"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 5
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <div class="form__price-container">
+                      <label for="trucks-price-input">
+                        Цена
+                        <input
+                          type="text"
+                          id="trucks-price-input"
+                          class="form__price-input"
+                          placeholder="50"
+                        >
+                      </label>
+                      <input
+                        type="text"
+                        class="form__price-input"
+                        placeholder="250000"
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form__controls-container">
+                    <button class="form__reset">Очистить фильтр</button>
+                    <input
+                      type="submit"
+                      class="form__submit"
+                      value="Применить фильтр"
+                    >
+                  </div>
+                </form>
+
+                <input
+                  type="radio"
+                  id="wheels-tab"
+                  name="category"
+                  class="goods-filter__radio"
+                >
+                <label for="wheels-tab" class="goods-filter__category-label">
+                  <span class="goods-filter__category-title">Ссылка 3</span>
+                </label>
+                <form
+                  id="wheels"
+                  class="goods-filter__form form"
+                  action="#"
+                >
+                  <div class="form__tabs-container">
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="wheels-tab-one"
+                    >
+                    <label for="wheels-tab-one">Tab 1</label>
+
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="wheels-tab-two"
+                      checked
+                    >
+                    <label for="wheels-tab-two">Tab 2</label>
+                  </div>
+
+                  <div class="form__selects-container">
+                    <select
+                      name="select-1"
+                      class="form__select"
+                      form="wheels"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 1
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-2"
+                      class="form__select"
+                      form="wheels"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 2
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-3"
+                      class="form__select"
+                      form="wheels"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 3
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-4"
+                      class="form__select"
+                      form="wheels"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 4
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-5"
+                      class="form__select"
+                      form="wheels"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 5
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <div class="form__price-container">
+                      <label for="wheels-price-input">
+                        Цена
+                        <input
+                          type="text"
+                          id="wheels-price-input"
+                          class="form__price-input"
+                          placeholder="50"
+                        >
+                      </label>
+                      <input
+                        type="text"
+                        class="form__price-input"
+                        placeholder="250000"
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form__controls-container">
+                    <button class="form__reset">Очистить фильтр</button>
+                    <input
+                      type="submit"
+                      class="form__submit"
+                      value="Применить фильтр"
+                    >
+                  </div>
+                </form>
+
+                <input
+                  type="radio"
+                  name="category"
+                  id="oil-tab"
+                  class="goods-filter__radio"
+                >
+
+                <label for="oil-tab" class="goods-filter__category-label">
+                  <span class="goods-filter__category-title">Ссылка 4</span>
+                </label>
+
+                <form
+                  id="oil"
+                  class="goods-filter__form form"
+                  action="#"
+                >
+                  <div class="form__tabs-container">
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="oil-tab-one"
+                    >
+                    <label for="oil-tab-one">Tab 1</label>
+
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="oil-tab-two"
+                      checked
+                    >
+                    <label for="oil-tab-two">Tab 2</label>
+                  </div>
+
+                  <div class="form__selects-container">
+                    <select
+                      name="select-1"
+                      class="form__select"
+                      form="oil"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 1
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-2"
+                      class="form__select"
+                      form="oil"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 2
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-3"
+                      class="form__select"
+                      form="oil"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 3
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-4"
+                      class="form__select"
+                      form="oil"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 4
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-5"
+                      class="form__select"
+                      form="oil"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 5
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <div class="form__price-container">
+                      <label for="oil-price-input">
+                        Цена
+                        <input
+                          type="text"
+                          id="oil-price-input"
+                          class="form__price-input"
+                          placeholder="50"
+                        >
+                      </label>
+                      <input
+                        type="text"
+                        class="form__price-input"
+                        placeholder="250000"
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form__controls-container">
+                    <button class="form__reset">Очистить фильтр</button>
+                    <input
+                      type="submit"
+                      class="form__submit"
+                      value="Применить фильтр"
+                    >
+                  </div>
+                </form>
+
+                <input
+                  type="radio"
+                  name="category"
+                  id="batteries-tab"
+                  class="goods-filter__radio"
+                >
+                <label
+                  for="batteries-tab"
+                  class="goods-filter__category-label"
+                >
+                  <span class="goods-filter__category-title">Ссылка 5</span>
+                </label>
+                <form
+                  id="batteries"
+                  class="goods-filter__form form"
+                  action="#"
+                >
+                  <div class="form__tabs-container">
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="batteries-tab-one"
+                    >
+                    <label for="batteries-tab-one">Tab 1</label>
+
+                    <input
+                      type="radio"
+                      class="form__tabs-toggle"
+                      name="tabs"
+                      id="batteries-tab-two"
+                      checked
+                    >
+                    <label for="batteries-tab-two">Tab 2</label>
+                  </div>
+
+                  <div class="form__selects-container">
+                    <select
+                      name="select-1"
+                      class="form__select"
+                      form="batteries"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 1
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-2"
+                      class="form__select"
+                      form="batteries"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 2
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-3"
+                      class="form__select"
+                      form="batteries"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 3
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-4"
+                      class="form__select"
+                      form="batteries"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 4
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <select
+                      name="select-5"
+                      class="form__select"
+                      form="batteries"
+                    >
+                      <option
+                        value=""
+                        class="form__select-option"
+                        selected
+                      >
+                        Select 5
+                      </option>
+                      <option value="option 1" class="form__select-option">option 1</option>
+                      <option value="option 2" class="form__select-option">option 2</option>
+                      <option value="option 3" class="form__select-option">option 3</option>
+                    </select>
+
+                    <div class="form__price-container">
+                      <label for="batteries-price-input">
+                        Цена
+                        <input
+                          type="text"
+                          id="batteries-price-input"
+                          class="form__price-input"
+                          placeholder="50"
+                        >
+                      </label>
+                      <input
+                        type="text"
+                        class="form__price-input"
+                        placeholder="250000"
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form__controls-container">
+                    <button class="form__reset">Очистить фильтр</button>
+                    <input
+                      type="submit"
+                      class="form__submit"
+                      value="Применить фильтр"
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__content">
+          <div class="container">
+            <div class="main__head">
+              <h2>Карточки товаров</h2>
+              <a href="#" class="main__head-link">Ссылка в каталог</a>
+            </div>
+            <div class="main__cards-container">
+              <div class="main__card card">
+                <div class="card__mark">Mark</div>
+
+                <h3 class="card__title">
+                  Антифриз Fosser Antifreeze FA 12 Readymix 1 л Concentrat, Germany
+                </h3>
+
+                <div class="card__product-info">
+                  <div class="card__rating card__rating--5">
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                  </div>
+
+                  <a href="#" class="card__testimonials">Отзывы (10)</a>
+
+                  <span class="card__in-stock">В наличии: 24 шт.</span>
+                </div>
+
+                <div class="card__image-container">
+                  <div class="card__info-marks">
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Летняя</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Легковая</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Новая</span>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/product-1.jpg"
+                    alt="wheel image"
+                    class="card__product-image"
+                  >
+                </div>
+
+                <div class="card__labels-container">
+                  <div class="card__label card__label--new">Новинка</div>
+                  <div class="card__label card__label--hit">Хит</div>
+                  <div class="card__label card__label--sale">Скидка</div>
+                </div>
+
+                <div class="card__prices">
+                  <span class="card__current-price">599 грн.</span>
+                  <span class="card__old-price">1250 грн.</span>
+                </div>
+
+                <div class="card__button-container">
+                  <button class="card__buy-button">Купить товар</button>
+                </div>
+
+                <div class="card__bottom-container">
+                  <div class="card__tocompare">
+                    <span class="card__tocompare-link">Сравнить товар</span>
+                  </div>
+
+                  <div class="card__tofavourite">
+                    <span class="card__tofavourite-link">В избранное</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main__card card">
+                <div class="card__mark">Mark</div>
+
+                <h3 class="card__title">
+                  Антифриз Fosser Antifreeze FA 12 Readymix 1 л Concentrat, Germany
+                </h3>
+
+                <div class="card__product-info">
+                  <div class="card__rating card__rating--5">
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                  </div>
+
+                  <a href="#" class="card__testimonials">Отзывы (10)</a>
+
+                  <span class="card__in-stock">В наличии: 24 шт.</span>
+                </div>
+
+                <div class="card__image-container">
+                  <div class="card__info-marks">
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Летняя</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Легковая</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Новая</span>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/product-1.jpg"
+                    alt="wheel image"
+                    class="card__product-image"
+                  >
+                </div>
+
+                <div class="card__labels-container">
+                  <div class="card__label card__label--new">Новинка</div>
+                  <div class="card__label card__label--hit">Хит</div>
+                  <div class="card__label card__label--sale">Скидка</div>
+                </div>
+
+                <div class="card__prices">
+                  <span class="card__current-price">599 грн.</span>
+                  <span class="card__old-price">1250 грн.</span>
+                </div>
+
+                <div class="card__button-container">
+                  <button class="card__buy-button">Купить товар</button>
+                </div>
+
+                <div class="card__bottom-container">
+                  <div class="card__tocompare">
+                    <span class="card__tocompare-link">Сравнить товар</span>
+                  </div>
+
+                  <div class="card__tofavourite">
+                    <span class="card__tofavourite-link">В избранное</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main__card card">
+                <div class="card__mark">Mark</div>
+
+                <h3 class="card__title">
+                  Антифриз Fosser Antifreeze FA 12 Readymix 1 л Concentrat, Germany
+                </h3>
+
+                <div class="card__product-info">
+                  <div class="card__rating card__rating--5">
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                  </div>
+
+                  <a href="#" class="card__testimonials">Отзывы (10)</a>
+
+                  <span class="card__in-stock">В наличии: 24 шт.</span>
+                </div>
+
+                <div class="card__image-container">
+                  <div class="card__info-marks">
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Летняя</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Легковая</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Новая</span>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/product-1.jpg"
+                    alt="wheel image"
+                    class="card__product-image"
+                  >
+                </div>
+
+                <div class="card__labels-container">
+                  <div class="card__label card__label--new">Новинка</div>
+                  <div class="card__label card__label--hit">Хит</div>
+                  <div class="card__label card__label--sale">Скидка</div>
+                </div>
+
+                <div class="card__prices">
+                  <span class="card__current-price">599 грн.</span>
+                  <span class="card__old-price">1250 грн.</span>
+                </div>
+
+                <div class="card__button-container">
+                  <button class="card__buy-button">Купить товар</button>
+                </div>
+
+                <div class="card__bottom-container">
+                  <div class="card__tocompare">
+                    <span class="card__tocompare-link">Сравнить товар</span>
+                  </div>
+
+                  <div class="card__tofavourite">
+                    <span class="card__tofavourite-link">В избранное</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main__card card">
+                <div class="card__mark">Mark</div>
+
+                <h3 class="card__title">
+                  Антифриз Fosser Antifreeze FA 12 Readymix 1 л Concentrat, Germany
+                </h3>
+
+                <div class="card__product-info">
+                  <div class="card__rating card__rating--5">
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                    <div class="card__star-container"></div>
+                  </div>
+
+                  <a href="#" class="card__testimonials">Отзывы (10)</a>
+
+                  <span class="card__in-stock">В наличии: 24 шт.</span>
+                </div>
+
+                <div class="card__image-container">
+                  <div class="card__info-marks">
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Летняя</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Легковая</span>
+                    </div>
+
+                    <div class="card__mark-container">
+                      <span class="card__mark-description">Новая</span>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/product-1.jpg"
+                    alt="wheel image"
+                    class="card__product-image"
+                  >
+                </div>
+
+                <div class="card__labels-container">
+                  <div class="card__label card__label--new">Новинка</div>
+                  <div class="card__label card__label--hit">Хит</div>
+                  <div class="card__label card__label--sale">Скидка</div>
+                </div>
+
+                <div class="card__prices">
+                  <span class="card__current-price">599 грн.</span>
+                  <span class="card__old-price">1250 грн.</span>
+                </div>
+
+                <div class="card__button-container">
+                  <button class="card__buy-button">Купить товар</button>
+                </div>
+
+                <div class="card__bottom-container">
+                  <div class="card__tocompare">
+                    <span class="card__tocompare-link">Сравнить товар</span>
+                  </div>
+
+                  <div class="card__tofavourite">
+                    <span class="card__tofavourite-link">В избранное</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__subscription">
+            <h3 class="footer__block-title">Блок 1</h3>
+            <p class="footer__descrition">
+              Будьте в курсе новостей и новинок!
+              <span class="footer__description--bold">Подписывайтесь на рассылку</span>
+
+              <form action="#" method="post">
+                <input type="email" placeholder="Укажите свой email для подписки">
+                <input type="submit" value="ПОДПИСАТЬСЯ">
+              </form>
+            </p>
+          </div>
+
+          <div class="footer__block-container">
+            <h3 class="footer__block-title">Блок ссылок 1</h3>
+            <ul class="footer__first-block">
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 1</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 2</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 3</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 4</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__block-container">
+            <h3 class="footer__block-title">Блок 2</h3>
+            <ul class="footer__second-block">
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 1</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 2</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 3</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 4</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__block-container">
+            <h3 class="footer__block-title">Блок ссылок 3</h3>
+            <ul class="footer__third-block">
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 1</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 2</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 3</a>
+              </li>
+
+              <li class="footer__block-item">
+                <a href="#" class="footer__block-link">Ссылка 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__developer-rights">
+            <a href="#" class="footer__logo-link"></a>
+
+            <span class="footer__copyrights">
+              &copy; Copyrith 2017. Тестовое задание Wezom
+            </span>
+          </div>
+
+          <div class="footer__soclinks-container">
+            <a href="#" class="footer__soclink footer__soclink--vk"></a>
+            <a href="#" class="footer__soclink footer__soclink--facebook"></a>
+            <a href="#" class="footer__soclink footer__soclink--twitter"></a>
+            <a href="#" class="footer__soclink footer__soclink--youtube"></a>
+          </div>
+
+          <div class="footer__developer-links">
+            <a href="#" class="developer__logo"></a>
+            <div class="footer__addition">
+              Разработка тестового
+              <a href="#" class="footer__developer-home">Wezom Agency</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
