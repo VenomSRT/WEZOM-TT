@@ -1,0 +1,69 @@
+.goods-navigation {
+  display: flex;
+  flex-direction: column;
+
+  &__menu {
+    padding-bottom: 10px;
+  }
+
+  &__menu-head {
+    display: grid;
+    height: 56px;
+    grid-template-columns: 62px 1fr;
+    align-items: center;
+    background-color: $bgButtonOrange;
+  }
+
+  &__menu-button {
+    display: flex;
+    height: 100%;
+    width: 62px;
+    background-color: rgba($color: #000, $alpha: 0.2);
+  }
+
+  &__menu-burger {
+    margin: auto;
+    width: 14px;
+    height: 10px;
+    background: url("../images/sprites.png") -10px -323px;
+  }
+
+  &__menu-title {
+    height: 100%;
+    padding-left: 22px;
+    font-size: 20px;
+    line-height: 56px;
+    background: linear-gradient(
+      90deg, rgba(255,139,0,1) 0%, rgba(255,180,19,1) 100%
+    );
+    color: $fontWhite;
+  }
+
+  &__menu-list {
+    padding-top: 14px;
+  }
+
+  &__menu-item {
+    position: relative;
+    padding: 16px 0 17px 40px;
+    border-bottom: 2px solid #f1f1f1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 10px;
+      width: 8px;
+      height: 14px;
+      background: url("../images/sprites.png") -331px -115px;
+    }
+  }
+
+  &__main-link {
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+
+  }
+}

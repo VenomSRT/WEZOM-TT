@@ -1,0 +1,11 @@
+.form {
+  flex-direction: column;
+
+  &__tabs-toggle {
+    display: none;
+  }
+
+  &__select {
+    width: 100%;
+  }
+}

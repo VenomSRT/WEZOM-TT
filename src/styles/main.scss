@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 div {
@@ -42,3 +43,6 @@ a {
 
 @import "header";
 @import "main-container";
+@import "goods-navigation";
+@import "goods-filter";
+@import "form";

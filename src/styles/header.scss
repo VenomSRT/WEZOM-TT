@@ -2,22 +2,30 @@
   background-color: $bgGrey;
 
   &__top {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 1;
   }
 
   &__menu {
-    display: block;
+    position: absolute;
+    display: none;
+    top: 50px;
     width: 100%;
-    padding-top: 20px;
     order: 3;
+    background-color: $bgGrey;
   }
 
   &__menu-item {
     padding: 10px 0;
     text-align: center;
+  }
+
+  &__menu-link {
+    text-transform: uppercase;
   }
 
   &__menu-button {
