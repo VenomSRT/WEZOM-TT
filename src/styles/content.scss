@@ -1,0 +1,43 @@
+.content {
+  padding-top: 20px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  &__title-wrapper {
+    display: inline-block;
+    margin-bottom: -1px;
+    border-bottom: 1px solid $bgButtonOrange;
+  }
+
+  &__head-link {
+    position: relative;
+    color: #000;
+    padding-right: 24px;
+    text-decoration: underline;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 15px;
+      height: 3px;
+      background-image: url(../images/link-arrow.png);
+    }
+  }
+
+  &__cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 340px);
+  }
+}

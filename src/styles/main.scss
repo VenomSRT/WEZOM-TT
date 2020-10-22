@@ -16,6 +16,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+}
+
 h3 {
   margin: 0;
 }
@@ -45,4 +49,7 @@ a {
 @import "main-container";
 @import "goods-navigation";
 @import "goods-filter";
+@import "labels-container";
 @import "form";
+@import "content";
+@import "card";

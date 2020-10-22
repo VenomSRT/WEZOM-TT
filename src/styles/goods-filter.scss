@@ -5,7 +5,7 @@
   &__search-container {
     display: flex;
     flex-wrap: wrap;
-
+    padding-bottom: 10px;
   }
 
   &__inputs-container {
@@ -55,60 +55,9 @@
 
   &__form {
     display: none;
-  }
 
-  &__radio {
-    display: none;
-
-    &:checked + form {
+    &:first-child {
       display: flex;
     }
-  }
-
-  &__category-label {
-    display: block;
-    background-color: #606a76;
-    cursor: pointer;
-
-    &--cars {
-      width: 40px;
-      height: 17px;
-      background: url("../images/sprites.png") -211px -178px;
-    }
-
-    &--trucks {
-      width: 46px;
-      height: 32px;
-      background: url("../images/sprites.png") -141px -124px;
-    }
-
-    &--wheels {
-      width: 25px;
-      height: 25px;
-      background: url("../images/sprites.png") -283px -197px;
-    }
-
-    &--oil {
-      width: 22px;
-      height: 29px;
-      background: url("../images/sprites.png") -283px -103px;
-    }
-
-    &--batteries {
-      width: 26px;
-      height: 24px;
-      background: url("../images/sprites.png") -56px -279px;
-    }
-  }
-
-  &__category-title {
-    display: none;
-  }
-
-  &__labels-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 10px 0;
   }
 }
