@@ -1,0 +1,260 @@
+.footer {
+  padding: 31px 10px 30px;
+  background-color: #696969;
+
+  &__top {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #7a7a7a;
+
+    @media (min-width: 1124px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 115px;
+    }
+
+    @media (min-width: 1300px) {
+      grid-template-columns: 576px 1fr;
+    }
+  }
+
+  &__footer-subscription {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block-title {
+    margin-bottom: 15px;
+    padding-bottom: 11px;
+    font-size: 20px;
+    color: #cbcbcb;
+    border-bottom: 1px solid #7a7a7a;
+
+    @media (min-width: 1300px) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__title-container {
+    padding-bottom: 11px;
+    border-bottom: 1px solid #ff8500;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cbcbcb;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 23px;
+
+    @media (min-width: 400px) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: 1300px) {
+      font-size: 20px;
+    }
+
+    &--bold {
+      color: $fontWhite;
+      font-weight: bold;
+      font-size: 16px;
+
+      @media (min-width: 1300px) {
+        padding: 10px 0 15px;
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: 540px) {
+      flex-wrap: nowrap;
+      max-width: 576px;
+    }
+  }
+
+  &__form-input {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding-left: 30px;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: 540px) {
+      flex-grow: 2;
+    }
+
+    @media (min-width: 1300px) {
+      width: 298px;
+    }
+  }
+
+  &__form-submit {
+    height: 50px;
+    flex-grow: 1;
+    background-color: $bgButtonOrange;
+    color: $fontWhite;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__link-blocks-container {
+    @media (min-width: 580px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 660px) {
+      column-gap: 21px;
+    }
+  }
+
+  &__block-container {
+    padding-top: 15px;
+
+    @media (min-width: 1124px) {
+      padding-top: 0;
+    }
+  }
+
+  &__block-item {
+    padding-bottom: 10px;
+
+    @media (min-width: 1300px) {
+      padding-bottom: 17px;
+    }
+  }
+
+  &__block-link {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__bottom {
+    padding-top: 24px;
+
+    @media (min-width: 1124px) {
+      display: grid;
+      grid-template-columns: 479px 226px 210px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__developer-rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+
+    @media (min-width: 1124px) {
+      flex-direction: row;
+    }
+  }
+
+  &__logo-link {
+    @media (min-width: 1124px) {
+      padding-right: 22px;
+      border-right: 1px solid #787878;
+    }
+  }
+
+  &__copyrights {
+    color: #a0a9b2;
+
+    @media (min-width: 1124px) {
+      padding-left: 16px;
+      font-size: 12px;
+    }
+  }
+
+  &__soclinks-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 49px);
+    column-gap: 10px;
+  }
+
+  &__soclink {
+    width: 49px;
+    height: 49px;
+    border: 1px solid #a0a9b2;
+
+    &:hover {
+      border-color: #ffc925;
+    }
+
+    &--vk {
+      background: url("../images/sprites.png") -87px -342px;
+
+      &:hover {
+        background-position: -318px -269px;
+      }
+    }
+
+    &--facebook {
+      background: url("../images/sprites.png") -389px -167px;
+
+      &:hover {
+        background-position: -389px -91px;
+      }
+    }
+
+    &--twitter {
+      background: url("../images/sprites.png") -89px -270px;
+
+      &:hover {
+        background-position: -13px -270px;
+      }
+    }
+
+    &--youtube {
+      background: url("../images/sprites.png") -242px -270px;
+
+      &:hover {
+        background-position: -166px -270px;
+      }
+    }
+  }
+
+  &__developer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+
+    @media (min-width: 1124px) {
+      padding-top: 0;
+    }
+  }
+
+  &__developer-logo {
+    padding: 5px 19px 0 0;
+  }
+
+  &__addition {
+    display: flex;
+    flex-direction: column;
+    padding-left: 19px;
+    border-left: 1px solid #787878;
+    font-size: 12px;
+    color: #a0a9b2;
+  }
+
+  &__developer-home {
+    font-size: 13px;
+  }
+}

@@ -1,29 +1,50 @@
 .content {
-  padding-top: 20px;
+  padding: 20px 10px;
+
+  @media (min-width: 700px) {
+    padding: 20px 0;
+  }
 
   &__head {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     border-bottom: 1px solid #dbdbdb;
+
+    @media (min-width: 700px) {
+      padding: 0 10px;
+    }
+
+    @media (min-width: 1360px) {
+      padding: 0;
+    }
   }
 
   &__title {
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 400;
+    padding-bottom: 9px;
+    border-bottom: 1px solid $bgButtonOrange;
+    @media (min-width: 700px) {
+      font-size: 36px;
+    }
   }
 
   &__title-wrapper {
     display: inline-block;
-    margin-bottom: -1px;
-    border-bottom: 1px solid $bgButtonOrange;
+
   }
 
   &__head-link {
     position: relative;
+    font-size: 12px;
     color: #000;
     padding-right: 24px;
     text-decoration: underline;
+
+    @media (min-width: 700px) {
+      font-size: 14px;
+    }
 
     &:after {
       content: "";
@@ -32,12 +53,19 @@
       right: 0;
       width: 15px;
       height: 3px;
-      background-image: url(../images/link-arrow.png);
+      background-image: url("../images/link-arrow.png");
+      background-repeat: no-repeat;
     }
   }
 
   &__cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 340px);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    justify-items: center;
+    justify-content: center;
+
+    @media (min-width: 700px) {
+      grid-template-columns: repeat(auto-fit, 340px);
+    }
   }
 }

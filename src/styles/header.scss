@@ -8,6 +8,15 @@
     align-items: center;
     flex-wrap: wrap;
     z-index: 1;
+
+    @media (min-width: 660px) {
+      flex-wrap: nowrap;
+      padding-left: 10px;
+    }
+
+    @media (min-width: 1360px) {
+      padding: 0;
+    }
   }
 
   &__menu {
@@ -17,14 +26,45 @@
     width: 100%;
     order: 3;
     background-color: $bgGrey;
+
+    @media (min-width: 660px) {
+      position: static;
+      display: flex;
+      order: 1;
+    }
+  }
+
+  &__menu-list {
+    @media (min-width: 660px) {
+      display: flex;
+      width: 456px;
+      justify-content: space-between;
+    }
   }
 
   &__menu-item {
     padding: 10px 0;
     text-align: center;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: #ffc925;
+    }
+
+    @media (min-width: 660px) {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      padding: 0 9px;
+    }
+
+    @media (min-width: 1360px) {
+      padding: 0;
+    }
   }
 
   &__menu-link {
+    font-size: 12px;
     text-transform: uppercase;
   }
 
@@ -32,22 +72,43 @@
     display: flex;
     width: 50px;
     height: 50px;
+    cursor: pointer;
+
+    @media (min-width: 660px) {
+      display: none;
+    }
   }
 
   &__button-image {
     width: 14px;
     height: 10px;
     margin: auto;
-    background: url("../images/sprites.png") -10px -323px;
+    background: url("../images/burger-icon.png");
+    background-repeat: no-repeat;
   }
 
   &__enter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     background-color: $bgButtonOrange;
     border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: 660px) {
+      width: 137px;
+      order: 2;
+    }
   }
 
   &__enter-description {
+    padding-left: 7px;
+    font-size: 11px;
     color: $fontWhite;
     text-transform: uppercase;
   }

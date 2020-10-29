@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="./styles/root.scss">
   </head>
   <body>
     <header class="header">
@@ -46,6 +46,42 @@
           >
           <span class="header__enter-description">Вход</span>
         </button>
+
+        <div class="header__enter-popup enter-popup">
+          <div class="enter-popup__cross-container"></div>
+          <form action="#" class="enter-popup__form">
+            <label for="mail" class="enter-popup__label">
+              Email
+              <input
+                type="email"
+                id="mail"
+                class="enter-popup__input"
+                maxlength="35"
+                required
+              >
+            </label>
+            <label for="password" class="enter-popup__label">
+              Пароль
+              <input
+                type="password"
+                id="password"
+                class="enter-popup__input"
+                maxlength="20"
+                required
+              >
+            </label>
+            <input
+              type="submit"
+              class="enter-popup__submit"
+              value="Войти"
+            >
+          </form>
+
+          <div class="enter-popup__links">
+            <a href="#" class="enter-popup__link">Зарегистрироваться</a>
+            <a href="#" class="enter-popup__link">Забыли пароль?</a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -60,11 +96,27 @@
             <span class="main__shop-telephone">+380 98 170 00 740</span>
             <span class="main__shop-telephone">+380 98 170 00 740</span>
             <button class="main__callback-button">Перезвонить мне</button>
+
+            <div class="main__callback-popup callback-popup">
+              <form action="#" class="callback-popup__form">
+                <input
+                  type="tel"
+                  id="telephone"
+                  class="callback-popup__input"
+                  placeholder="+38(0--) --- -- --"
+                >
+                <input
+                  type="submit"
+                  class="callback-popup__submit"
+                  value="Отправить"
+                >
+              </form>
+            </div>
           </div>
 
-          <div class="main__misc-block">
-            <div class="main__comparison">
-              <div class="main__counter-label">0</div>
+          <div class="main__misc-container">
+            <div class="main__misc-block">
+              <div class="main__counter-label" id="comparison">0</div>
               <img
                 src="./images/weighter-icon.png"
                 alt="weighter image"
@@ -73,8 +125,8 @@
               <span class="main__misc-description">Сравнение</span>
             </div>
 
-            <div class="main__comparison">
-              <div class="main__counter-label">0</div>
+            <div class="main__misc-block">
+              <div class="main__counter-label" id="favourites">0</div>
               <img
                 src="./images/star-icon.png"
                 alt="star image"
@@ -83,7 +135,7 @@
               <span class="main__misc-description">Избранное</span>
             </div>
 
-            <div class="main__comparison">
+            <div class="main__misc-block">
               <div class="main__counter-label">0</div>
               <img
                 src="./images/cart-icon.png"
@@ -189,10 +241,11 @@
                   type="radio"
                   name="category"
                   id="cars-tab"
-                  class="labels-container__radio"
+                  class="labels-container__radio labels-container__radio--cars"
                   checked
                 >
                 <label for="cars-tab" class="labels-container__category-label category-label--cars">
+                  <div class="labels-container__image--cars"></div>
                   <span class="labels-container__category-title">Ссылка 1</span>
                 </label>
 
@@ -200,9 +253,10 @@
                   type="radio"
                   name="category"
                   id="trucks-tab"
-                  class="labels-container__radio"
+                  class="labels-container__radio labels-container__radio--trucks"
                 >
                 <label for="trucks-tab" class="labels-container__category-label category-label--trucks">
+                  <div class="labels-container__image--trucks"></div>
                   <span class="labels-container__category-title">Ссылка 2</span>
                 </label>
 
@@ -210,9 +264,10 @@
                   type="radio"
                   name="category"
                   id="wheels-tab"
-                  class="labels-container__radio"
+                  class="labels-container__radio labels-container__radio--wheels"
                 >
                 <label for="wheels-tab" class="labels-container__category-label category-label--wheels">
+                  <div class="labels-container__image--wheels"></div>
                   <span class="labels-container__category-title">Ссылка 3</span>
                 </label>
 
@@ -220,9 +275,10 @@
                   type="radio"
                   name="category"
                   id="oil-tab"
-                  class="labels-container__radio"
+                  class="labels-container__radio  labels-container__radio--oil"
                 >
                 <label for="oil-tab" class="labels-container__category-label category-label--oil">
+                  <div class="labels-container__image--oil"></div>
                   <span class="labels-container__category-title">Ссылка 4</span>
                 </label>
 
@@ -230,12 +286,13 @@
                   type="radio"
                   name="category"
                   id="batteries-tab"
-                  class="labels-container__radio"
+                  class="labels-container__radio  labels-container__radio--batteries"
                 >
                 <label
                   for="batteries-tab"
                   class="labels-container__category-label category-label--batteries"
                 >
+                  <div class="labels-container__image--batteries"></div>
                   <span class="labels-container__category-title">Ссылка 5</span>
                 </label>
               </div>
@@ -1118,15 +1175,41 @@
                   >
                 </div>
 
-                <div class="card__labels-container">
-                  <div class="card__label card__label--new">Новинка</div>
-                  <div class="card__label card__label--hit">Хит</div>
-                  <div class="card__label card__label--sale">Скидка</div>
+                <div class="card__tickets-container">
+                  <div class="tickets-container__ticket ticket ticket--new">
+                    <div class="ticket__container">
+                      <div class="ticket__corners ticket__corners--left ticket__corners--new"></div>
+                      <div class="ticket__cut ticket__cut--left ticket__cut--new"></div>
+                      <div class="ticket__base ticket__base--new">Новинка</div>
+                      <div class="ticket__cut ticket__cut--right ticket__cut--new"></div>
+                      <div class="ticket__corners ticket__corners--right ticket__corners--new"></div>
+                    </div>
+                  </div>
+
+                  <div class="tickets-container__ticket ticket ticket--hit">
+                    <div class="ticket__container">
+                      <div class="ticket__corners ticket__corners--left ticket__corners--hit"></div>
+                      <div class="ticket__cut ticket__cut--left ticket__cut--hit"></div>
+                      <div class="ticket__base ticket__base--hit">Хит</div>
+                      <div class="ticket__cut ticket__cut--right ticket__cut--hit"></div>
+                      <div class="ticket__corners ticket__corners--right ticket__corners--hit"></div>
+                    </div>
+                  </div>
+
+                  <div class="tickets-container__ticket ticket ticket--discount">
+                    <div class="ticket__container">
+                      <div class="ticket__corners ticket__corners--left ticket__corners--discount"></div>
+                      <div class="ticket__cut ticket__cut--left ticket__cut--discount"></div>
+                      <div class="ticket__base ticket__base--discount">Скидка</div>
+                      <div class="ticket__cut ticket__cut--right ticket__cut--discount"></div>
+                      <div class="ticket__corners ticket__corners--right ticket__corners--discount"></div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="card__prices">
-                  <span class="card__current-price">599 грн.</span>
-                  <span class="card__old-price">1250 грн.</span>
+                  <span class="card__current-price">599 <span class="card__current-price--units">грн.</span></span>
+                  <span class="card__old-price">1250 <span class="card__old-price--units">грн.</span></span>
                 </div>
 
                 <div class="card__button-container">
@@ -1135,10 +1218,20 @@
 
                 <div class="card__bottom-container">
                   <div class="card__tocompare">
+                    <img
+                      class="card__tocompare-image"
+                      src="./images/weighter-card-icon.png"
+                      alt="weighter image"
+                    >
                     <span class="card__tocompare-link">Сравнить товар</span>
                   </div>
 
                   <div class="card__tofavourite">
+                    <img
+                      class="card__tofavourite-image"
+                      src="./images/star-card-icon.png"
+                      alt="star image"
+                    >
                     <span class="card__tofavourite-link">В избранное</span>
                   </div>
                 </div>
@@ -1194,14 +1287,31 @@
                   >
                 </div>
 
-                <div class="card__labels-container">
-                  <div class="card__label card__label--new">Новинка</div>
-                  <div class="card__label card__label--hit">Хит</div>
+                <div class="card__tickets-container">
+                  <div class="tickets-container__ticket ticket ticket--new">
+                    <div class="ticket__container">
+                      <div class="ticket__corners ticket__corners--left ticket__corners--new"></div>
+                      <div class="ticket__cut ticket__cut--left ticket__cut--new"></div>
+                      <div class="ticket__base ticket__base--new">Новинка</div>
+                      <div class="ticket__cut ticket__cut--right ticket__cut--new"></div>
+                      <div class="ticket__corners ticket__corners--right ticket__corners--new"></div>
+                    </div>
+                  </div>
+
+                  <div class="tickets-container__ticket ticket ticket--hit">
+                    <div class="ticket__container">
+                      <div class="ticket__corners ticket__corners--left ticket__corners--hit"></div>
+                      <div class="ticket__cut ticket__cut--left ticket__cut--hit"></div>
+                      <div class="ticket__base ticket__base--hit">Хит</div>
+                      <div class="ticket__cut ticket__cut--right ticket__cut--hit"></div>
+                      <div class="ticket__corners ticket__corners--right ticket__corners--hit"></div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="card__prices">
-                  <span class="card__current-price">599 грн.</span>
-                  <span class="card__old-price">1250 грн.</span>
+                  <span class="card__current-price">599 <span class="card__current-price--units">грн.</span></span>
+                  <span class="card__old-price">1250 <span class="card__old-price--units">грн.</span></span>
                 </div>
 
                 <div class="card__button-container">
@@ -1210,10 +1320,20 @@
 
                 <div class="card__bottom-container">
                   <div class="card__tocompare">
+                    <img
+                      class="card__tocompare-image"
+                      src="./images/weighter-card-icon.png"
+                      alt="weighter image"
+                    >
                     <span class="card__tocompare-link">Сравнить товар</span>
                   </div>
 
                   <div class="card__tofavourite">
+                    <img
+                      class="card__tofavourite-image"
+                      src="./images/star-card-icon.png"
+                      alt="star image"
+                    >
                     <span class="card__tofavourite-link">В избранное</span>
                   </div>
                 </div>
@@ -1278,13 +1398,21 @@
                   >
                 </div>
 
-                <div class="card__labels-container">
-                  <div class="card__label card__label--new">Новинка</div>
+                <div class="card__tickets-container">
+                  <div class="tickets-container__ticket ticket ticket--new">
+                    <div class="ticket__container">
+                      <div class="ticket__corners ticket__corners--left ticket__corners--new"></div>
+                      <div class="ticket__cut ticket__cut--left ticket__cut--new"></div>
+                      <div class="ticket__base ticket__base--new">Новинка</div>
+                      <div class="ticket__cut ticket__cut--right ticket__cut--new"></div>
+                      <div class="ticket__corners ticket__corners--right ticket__corners--new"></div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="card__prices">
-                  <span class="card__current-price">599 грн.</span>
-                  <span class="card__old-price">1250 грн.</span>
+                  <span class="card__current-price">9 570 <span class="card__current-price--units">грн.</span></span>
+                  <span class="card__old-price">11 250 <span class="card__old-price--units">грн.</span></span>
                 </div>
 
                 <div class="card__button-container">
@@ -1293,10 +1421,20 @@
 
                 <div class="card__bottom-container">
                   <div class="card__tocompare">
+                    <img
+                      class="card__tocompare-image"
+                      src="./images/weighter-card-icon.png"
+                      alt="weighter image"
+                    >
                     <span class="card__tocompare-link">Сравнить товар</span>
                   </div>
 
                   <div class="card__tofavourite">
+                    <img
+                      class="card__tofavourite-image"
+                      src="./images/star-card-icon.png"
+                      alt="star image"
+                    >
                     <span class="card__tofavourite-link">В избранное</span>
                   </div>
                 </div>
@@ -1352,12 +1490,12 @@
                   >
                 </div>
 
-                <div class="card__labels-container">
+                <div class="card__tickets-container">
                 </div>
 
                 <div class="card__prices">
-                  <span class="card__current-price">599 грн.</span>
-                  <span class="card__old-price">1250 грн.</span>
+                  <span class="card__current-price">599 <span class="card__current-price--units">грн.</span></span>
+                  <span class="card__old-price"><span class="card__old-price--units"></span></span>
                 </div>
 
                 <div class="card__button-container">
@@ -1366,10 +1504,20 @@
 
                 <div class="card__bottom-container">
                   <div class="card__tocompare">
+                    <img
+                      class="card__tocompare-image"
+                      src="./images/weighter-card-icon.png"
+                      alt="weighter image"
+                    >
                     <span class="card__tocompare-link">Сравнить товар</span>
                   </div>
 
                   <div class="card__tofavourite">
+                    <img
+                      class="card__tofavourite-image"
+                      src="./images/star-card-icon.png"
+                      alt="star image"
+                    >
                     <span class="card__tofavourite-link">В избранное</span>
                   </div>
                 </div>
@@ -1384,88 +1532,117 @@
       <div class="container">
         <div class="footer__top">
           <div class="footer__subscription">
-            <h3 class="footer__block-title">Блок 1</h3>
-            <p class="footer__descrition">
+            <h3 class="footer__block-title">
+              <span class="footer__title-container">Блок 1</span>
+            </h3>
+            <p class="footer__description">
               Будьте в курсе новостей и новинок!
               <span class="footer__description--bold">Подписывайтесь на рассылку</span>
-
-              <form action="#" method="post">
-                <input type="email" placeholder="Укажите свой email для подписки">
-                <input type="submit" value="ПОДПИСАТЬСЯ">
-              </form>
             </p>
+            <form
+              class="footer__form"
+              action="#"
+              method="post"
+            >
+              <input
+                type="email"
+                class="footer__form-input"
+                placeholder="Укажите свой email для подписки"
+                maxlength="35"
+                required
+              >
+              <input
+                type="submit"
+                class="footer__form-submit"
+                value="ПОДПИСАТЬСЯ"
+              >
+            </form>
           </div>
 
-          <div class="footer__block-container">
-            <h3 class="footer__block-title">Блок ссылок 1</h3>
-            <ul class="footer__first-block">
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 1</a>
-              </li>
+          <div class="footer__link-blocks-container">
+            <div class="footer__block-container">
+              <h3 class="footer__block-title">
+                <span class="footer__title-container">Блок ссылок 1</span>
+              </h3>
+              <ul class="footer__first-block">
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 1</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 2</a>
-              </li>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 2</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 3</a>
-              </li>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 3</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 4</a>
-              </li>
-            </ul>
-          </div>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 4</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="footer__block-container">
-            <h3 class="footer__block-title">Блок 2</h3>
-            <ul class="footer__second-block">
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 1</a>
-              </li>
+            <div class="footer__block-container">
+              <h3 class="footer__block-title">
+                <span class="footer__title-container">Блок 2</span>
+              </h3>
+              <ul class="footer__second-block">
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 1</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 2</a>
-              </li>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 2</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 3</a>
-              </li>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 3</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 4</a>
-              </li>
-            </ul>
-          </div>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 4</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="footer__block-container">
-            <h3 class="footer__block-title">Блок ссылок 3</h3>
-            <ul class="footer__third-block">
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 1</a>
-              </li>
+            <div class="footer__block-container">
+              <h3 class="footer__block-title">
+                <span class="footer__title-container">Блок ссылок 3</span>
+              </h3>
+              <ul class="footer__third-block">
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 1</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 2</a>
-              </li>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 2</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 3</a>
-              </li>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 3</a>
+                </li>
 
-              <li class="footer__block-item">
-                <a href="#" class="footer__block-link">Ссылка 4</a>
-              </li>
-            </ul>
+                <li class="footer__block-item">
+                  <a href="#" class="footer__block-link">Ссылка 4</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="footer__bottom">
           <div class="footer__developer-rights">
-            <a href="#" class="footer__logo-link"></a>
+            <a href="#" class="footer__logo-link">
+              <img
+                class="footer__site-logo"
+                src="./images/site-logo-dark.png"
+                alt="site logo"
+              >
+            </a>
 
             <span class="footer__copyrights">
-              &copy; Copyrith 2017. Тестовое задание Wezom
+              &copy; Copyright 2017. Тестовое задание Wezom
             </span>
           </div>
 
@@ -1477,7 +1654,12 @@
           </div>
 
           <div class="footer__developer-links">
-            <a href="#" class="developer__logo"></a>
+            <a href="#" class="footer__developer-logo">
+              <img
+                src="./images/wezom-logo.png"
+                alt="developer logotype"
+                class="footer__logo-image">
+            </a>
             <div class="footer__addition">
               Разработка тестового
               <a href="#" class="footer__developer-home">Wezom Agency</a>
