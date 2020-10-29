@@ -155,6 +155,5 @@ function addToFavourite() {
 emailValidator();
 passwordValidator();
 priceValidatior();
-telephoneValidator();
 addToComparison();
 addToFavourite();
