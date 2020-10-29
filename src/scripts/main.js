@@ -29,7 +29,7 @@ document.querySelector('.labels-container')
     }
   });
 
-document.querySelector('.header__enter-description')
+document.querySelector('.header__enter-button')
   .addEventListener('click', () => {
     document.querySelector('.enter-popup').style.transform = 'translate(0, 0)';
   });
@@ -101,16 +101,6 @@ function priceValidatior() {
         event.target.style.backgroundColor = '#baffba';
       }
     });
-  });
-}
-
-function telephoneValidator() {
-  const telephoneInput = document.querySelector('#telephone');
-
-  telephoneInput.addEventListener('input', (event) => {
-    const currentValue = event.target.value;
-
-    event.target.value = `+38(0${currentValue}`;
   });
 }
 
