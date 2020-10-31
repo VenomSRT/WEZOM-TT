@@ -1,5 +1,11 @@
 'use strict';
 
+emailValidator();
+passwordValidator();
+priceValidatior();
+addToComparison();
+addToFavourite();
+
 let menuDisplay = 'none';
 
 function toggleMenu() {
@@ -152,8 +158,66 @@ function addToFavourite() {
   });
 }
 
-emailValidator();
-passwordValidator();
-priceValidatior();
-addToComparison();
-addToFavourite();
+const cardsContainer = document.querySelector('#cards-container');
+const cardsContainerHtml = document.querySelector('#cards-container').innerHTML;
+
+document.querySelector('.goods-filter__search-container')
+  .addEventListener('click', event => {
+    if (event.target.className === 'goods-filter__search-button') {
+      event.preventDefault();
+
+      const inputField = document.querySelector('#search-bar');
+
+      if (inputField.value.trim().length < 2) {
+        cardsContainer.innerHTML = cardsContainerHtml;
+        inputField.value = 'Введите минимум два символа!';
+
+        setTimeout(() => {
+          inputField.value = '';
+        }, 3000);
+
+        return;
+      }
+
+      const regExp = new RegExp(inputField.value, 'gi');
+      const allMatches = [...cardsContainerHtml.matchAll(regExp)];
+
+      if (allMatches.length === 0) {
+        inputField.value = 'Ничего не найдено';
+
+        setTimeout(() => {
+          inputField.value = '';
+        }, 2000);
+
+        return;
+      }
+
+      const sortedWords = [];
+
+      allMatches.forEach(foundedMatch => {
+        if (!sortedWords.includes(foundedMatch[0])) {
+          sortedWords.push(foundedMatch[0]);
+        }
+      });
+
+      sortedWords.forEach(word => {
+        const wordRegExp = new RegExp(word, 'g');
+
+        cardsContainer.innerHTML = cardsContainerHtml
+          .replace(wordRegExp, `<mark>${word}</mark>`);
+      });
+    }
+  });
+
+document.querySelector('.footer__form-submit').addEventListener('click', () => {
+  const subscriptionPopup = document
+    .querySelector('.footer__subscription-popup');
+
+  subscriptionPopup.style.left = '10px';
+  subscriptionPopup.style.opacity = '1';
+
+  setTimeout(() => {
+    subscriptionPopup.style.left = '-100%';
+    subscriptionPopup.style.opacity = '0';
+  }, 5000);
+});

@@ -62,6 +62,10 @@
       width: 196px;
       margin: 0;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__filter-container {
