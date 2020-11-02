@@ -1,7 +1,9 @@
 'use strict';
 
-emailValidator();
-passwordValidator();
+let cardsContainerHtml = document.querySelector('#cards-container').innerHTML;
+const categoryFormsHtml = document
+  .querySelector('.goods-filter__category').innerHTML;
+
 priceValidatior();
 addToComparison();
 addToFavourite();
@@ -52,49 +54,70 @@ document.querySelector('.main__callback-button')
       .style.transform = 'translate(0, 0)';
   });
 
-document.querySelector('#telephone')
-  .addEventListener('focusout', () => {
+document.querySelector('.callback-popup__submit')
+  .addEventListener('click', event => {
+    event.preventDefault();
+
     document.querySelector('.callback-popup')
       .style.transform = 'translate(0, -100%)';
   });
 
-function emailValidator() {
-  const emailInputs = document.querySelectorAll('input[type="email"]');
+document.querySelector('#telephone')
+  .addEventListener('input', event => {
+    const inputField = event.target;
 
-  function validateEmail(email) {
-    const re = /[0-9a-z_A-Z]+@[0-9a-z_A-Z^.]+\.[a-zA-Z]{2,4}/i;
+    if (inputField.value.match(/\d/g)) {
+      inputField.placeholder = inputField.placeholder
+        .replace(/-/, inputField.value.match(/\d/g));
+    }
 
-    return re.test(String(email).toLowerCase());
-  }
-
-  emailInputs.forEach(input => {
-    input.addEventListener('input', (event) => {
-      if (!validateEmail(event.target.value)) {
-        event.target.style.backgroundColor = '#ffbaba';
-      } else {
-        event.target.style.backgroundColor = '#baffba';
-      }
-    });
+    inputField.value = '';
   });
-}
 
-function passwordValidator() {
-  const passwordInput = document.querySelector('#password');
+document.querySelector('#telephone')
+  .addEventListener('keydown', event => {
+    if (event.key === 'Backspace') {
+      const inputField = event.target;
 
-  function validatePassword(password) {
-    const re = /[\w\d]{4,}/i;
-
-    return re.test(String(password).toLowerCase());
-  }
-
-  passwordInput.addEventListener('input', (event) => {
-    if (!validatePassword(event.target.value)) {
-      event.target.style.backgroundColor = '#ffbaba';
-    } else {
-      event.target.style.backgroundColor = '#baffba';
+      inputField.placeholder = inputField.placeholder
+        .replace(/\d(?=[^\d]*$)/, '-');
     }
   });
+
+function emailValidator(event) {
+  const regExp = /[0-9a-z_A-Z]+@[0-9a-z_A-Z^.]+\.[a-zA-Z]{2,4}/i;
+  const emailInput = event.target;
+
+  if (!regExp.test(String(emailInput.value))) {
+    emailInput.style.backgroundColor = '#ffc3c3';
+    emailInput.setAttribute('data-valid', '0');
+  } else {
+    emailInput.style.backgroundColor = '#c3ffc3';
+    emailInput.setAttribute('data-valid', '1');
+  }
 }
+
+function passwordValidator(event) {
+  const regExp = /[\w\d]{4,}/i;
+  const passwordInput = event.target;
+
+  if (!regExp.test(String(passwordInput.value))) {
+    passwordInput.style.backgroundColor = '#ffc3c3';
+    passwordInput.setAttribute('data-valid', '0');
+  } else {
+    passwordInput.style.backgroundColor = '#c3ffc3';
+    passwordInput.setAttribute('data-valid', '1');
+  }
+}
+
+document.querySelector('#submition-input')
+  .addEventListener('input', emailValidator);
+
+document.querySelector('#mail')
+  .addEventListener('input', emailValidator);
+
+document.querySelector('#password')
+  .addEventListener('input', passwordValidator);
 
 function priceValidatior() {
   const priceInputs = document.querySelectorAll('.form__price-input');
@@ -109,6 +132,15 @@ function priceValidatior() {
     });
   });
 }
+
+const resetFormButtons = document.querySelectorAll('.form__reset');
+
+resetFormButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelector('.goods-filter__category')
+      .innerHTML = categoryFormsHtml;
+  });
+});
 
 function addToComparison() {
   const compareLinks = document.querySelectorAll('.card__tocompare-link');
@@ -130,6 +162,8 @@ function addToComparison() {
       } else {
         counterLabel.style.display = 'none';
       }
+
+      cardsContainerHtml = document.querySelector('#cards-container').innerHTML;
     });
   });
 }
@@ -154,12 +188,13 @@ function addToFavourite() {
       } else {
         favouriteLabel.style.display = 'none';
       }
+
+      cardsContainerHtml = document.querySelector('#cards-container').innerHTML;
     });
   });
 }
 
 const cardsContainer = document.querySelector('#cards-container');
-const cardsContainerHtml = document.querySelector('#cards-container').innerHTML;
 
 document.querySelector('.goods-filter__search-container')
   .addEventListener('click', event => {
@@ -171,6 +206,12 @@ document.querySelector('.goods-filter__search-container')
       if (inputField.value.trim().length < 2) {
         cardsContainer.innerHTML = cardsContainerHtml;
         inputField.value = 'Введите минимум два символа!';
+
+        cardsContainer.innerHTML = cardsContainerHtml
+          .replace(/<mark>|<\/mark>/g, '');
+
+        addToComparison();
+        addToFavourite();
 
         setTimeout(() => {
           inputField.value = '';
@@ -206,18 +247,38 @@ document.querySelector('.goods-filter__search-container')
         cardsContainer.innerHTML = cardsContainerHtml
           .replace(wordRegExp, `<mark>${word}</mark>`);
       });
+
+      addToComparison();
+      addToFavourite();
     }
   });
 
-document.querySelector('.footer__form-submit').addEventListener('click', () => {
-  const subscriptionPopup = document
-    .querySelector('.footer__subscription-popup');
+document.querySelector('.enter-popup__submit')
+  .addEventListener('click', event => {
+    if (!(+document.querySelector('#password').getAttribute('data-valid')
+      && +document.querySelector('#mail').getAttribute('data-valid')
+    )) {
+      event.preventDefault();
+    }
+  });
 
-  subscriptionPopup.style.left = '10px';
-  subscriptionPopup.style.opacity = '1';
+document.querySelector('.footer__form-submit')
+  .addEventListener('click', event => {
+    const subscriptionPopup = document
+      .querySelector('.footer__subscription-popup');
 
-  setTimeout(() => {
-    subscriptionPopup.style.left = '-100%';
-    subscriptionPopup.style.opacity = '0';
-  }, 5000);
-});
+    if (!+document.querySelector('#submition-input')
+      .getAttribute('data-valid')) {
+      event.preventDefault();
+    } else {
+      event.preventDefault();
+
+      subscriptionPopup.style.left = '10px';
+      subscriptionPopup.style.opacity = '1';
+
+      setTimeout(() => {
+        subscriptionPopup.style.left = '-100%';
+        subscriptionPopup.style.opacity = '0';
+      }, 3000);
+    }
+  });

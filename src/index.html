@@ -58,6 +58,7 @@
                 class="enter-popup__input"
                 maxlength="35"
                 required
+                data-valid="0"
               >
             </label>
             <label for="password" class="enter-popup__label">
@@ -68,6 +69,7 @@
                 class="enter-popup__input"
                 maxlength="20"
                 required
+                data-valid="0"
               >
             </label>
             <input
@@ -1547,10 +1549,10 @@
             >
               <input
                 type="email"
+                id="submition-input"
                 class="footer__form-input"
                 placeholder="Укажите свой email для подписки"
-                maxlength="35"
-                required
+                data-valid="0"
               >
               <input
                 type="submit"
