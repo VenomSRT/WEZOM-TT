@@ -1,0 +1,123 @@
+.labels-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #606a76;
+  padding: 0 14px;
+
+  &__category-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 72px;
+    border-bottom: 2px solid transparent;
+  }
+
+  &__image {
+    &--cars {
+      width: 40px;
+      height: 17px;
+      background: url("../images/sprites.png") -130px -122px;
+    }
+
+    &--trucks {
+      width: 46px;
+      height: 32px;
+      background: url("../images/sprites.png") -136px -30px;
+    }
+
+    &--wheels {
+      width: 25px;
+      height: 25px;
+      background: url("../images/sprites.png") -197px -199px;
+    }
+
+    &--oil {
+      width: 22px;
+      height: 29px;
+      background: url("../images/sprites.png") -30px -199px;
+    }
+
+    &--batteries {
+      width: 26px;
+      height: 24px;
+      background: url("../images/sprites.png") -324px -114px;
+    }
+  }
+
+  &__category-title {
+    display: none;
+    font-size: 19px;
+    padding-left: 17px;
+    font-weight: bold;
+    color: #a0a6ad;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &__radio {
+    display: none;
+
+    &:checked + .category-label--cars {
+      border-color: #ffc925;
+    }
+
+    &:checked + .category-label--cars > div {
+      background-position: -30px -122px;
+    }
+
+    &:checked + .category-label--cars > span {
+      color: $fontWhite;
+    }
+
+    &:checked + .category-label--trucks {
+      border-color: #ffc925;
+    }
+
+    &:checked + .category-label--trucks > div {
+      background-position: -30px -30px;
+    }
+
+    &:checked + .category-label--trucks > span {
+      color: $fontWhite;
+    }
+
+    &:checked + .category-label--wheels {
+      border-color: #ffc925;
+    }
+
+    &:checked + .category-label--wheels > div {
+      background-position: -112px -199px;
+    }
+
+    &:checked + .category-label--wheels > span {
+      color: $fontWhite;
+    }
+
+    &:checked + .category-label--oil {
+      border-color: #ffc925;
+    }
+
+    &:checked + .category-label--oil > div {
+      background-position: -242px -30px;
+    }
+
+    &:checked + .category-label--oil > span {
+      color: $fontWhite;
+    }
+
+    &:checked + .category-label--batteries {
+      border-color: #ffc925;
+    }
+
+    &:checked + .category-label--batteries > div {
+      background-position: -324px -30px;
+    }
+
+    &:checked + .category-label--batteries > span {
+      color: $fontWhite;
+    }
+  }
+}

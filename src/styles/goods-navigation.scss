@@ -1,0 +1,80 @@
+.goods-navigation {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    padding-bottom: 10px;
+
+    @media (min-width: 800px) {
+      flex-grow: 1;
+      max-width: 326px;
+    }
+  }
+
+  &__menu-head {
+    display: grid;
+    height: 56px;
+    grid-template-columns: 62px 1fr;
+    align-items: center;
+    background-color: $bgButtonOrange;
+  }
+
+  &__menu-button {
+    display: flex;
+    height: 100%;
+    width: 62px;
+    background-color: rgba($color: #000, $alpha: 0.2);
+  }
+
+  &__menu-burger {
+    margin: auto;
+    width: 14px;
+    height: 10px;
+    background-image: url("../images/burger-icon.png");
+    background-repeat: no-repeat;
+  }
+
+  &__menu-title {
+    height: 100%;
+    padding-left: 22px;
+    font-size: 20px;
+    line-height: 56px;
+    background: linear-gradient(
+      90deg, rgba(255,139,0,1) 0%, rgba(255,180,19,1) 100%
+    );
+    color: $fontWhite;
+  }
+
+  &__menu-list {
+    padding-top: 14px;
+  }
+
+  &__menu-item {
+    position: relative;
+    padding: 14px 0 19px 40px;
+    border-bottom: 2px solid #f1f1f1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 37px;
+      width: 8px;
+      height: 14px;
+      background: url("../images/sprites.png") -410px -259px;
+    }
+  }
+
+  &__main-link {
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+
+  }
+}

@@ -1,0 +1,68 @@
+@import "utils";
+@import "fonts";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+input[type="submit"] {
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+@import "header";
+@import "enter-popup";
+@import "main";
+@import "callback-popup";
+@import "goods-navigation";
+@import "goods-filter";
+@import "labels-container";
+@import "form";
+@import "content";
+@import "card";
+@import "ticket";
+@import "footer";
